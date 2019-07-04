@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>订单评价</title>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="__ADMIN__/lib/layui/css/layui.css" media="all">
+</head>
+<body>
+<blockquote class="layui-elem-quote">评论内容</blockquote>
+<div style="padding: 0 10px">
+    <table class="layui-table">
+        <thead>
+        <tr>
+            <th width="30%">服务态度</th>
+            <th>菜品评价</th>
+            <th>平均分数</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{$data.item1}</td>
+            <td>{$data.item2}</td>
+            <td>{$data.average}</td>
+        </tr>
+        <tr>
+            <td>评价内容</td>
+            <td colspan="2">{$data.contents}</td>
+        </tr>
+        <tr>
+            <td>回复内容</td>
+            {if condition="$data['reply_time']"}
+            <td colspan="2">{$data.reply_contents}</td>
+            {else /}
+            <td colspan="2"><textarea name="reply_contents" placeholder="请输入回复内容" class="layui-textarea"></textarea>
+            </td>
+            {/if}
+        </tr>
+        </tbody>
+    </table>
+    {if condition="!$data['reply_time']"}
+    <button class="layui-btn layui-btn-sm" type="button">回复</button>
+    {/if}
+</div>
+<script src="__ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['layer', 'jquery'], function () {
+        var layer = layui.layer
+            , $ = layui.jquery;
+        $("button").click(function () {
+            var con = $("textarea").val();
+            if (!con) {
+                layer.msg("请输入回复的内容");
+                return false;
+            }
+            $.post('{:url("admin/order/evaluateSubmit")}', {
+                comment_id: '{$data.comment_id}',
+                reply_contents: con,
+            }, function (res) {
+                if (res.code == 1) {
+                    window.location.reload()
+                }
+                layer.msg(res.msg)
+            })
+        })
+    });
+</script>
+</body>
+</html>
