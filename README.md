@@ -18,9 +18,9 @@ npm install
 npm run dev
 ~~~
 
-### 效果图
+### 前端效果图
 
-![](https://github.com/lhbyllcl2/graduation/blob/master/picture/20190704134226.png)  ![](https://github.com/lhbyllcl2/graduation/blob/master/picture/20190704134311.png)
-------
-![](https://github.com/lhbyllcl2/graduation/blob/master/picture/20190704134327.png)  ![](https://github.com/lhbyllcl2/graduation/blob/master/picture/20190704135212.png)
+![](https://github.com/lhbyllcl2/graduation/blob/master/picture/20190704134226.png)    
+![](https://github.com/lhbyllcl2/graduation/blob/master/picture/20190704134327.png)
+![](https://github.com/lhbyllcl2/graduation/blob/master/picture/20190704135212.png)
 
