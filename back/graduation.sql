@@ -43,7 +43,7 @@ CREATE TABLE `vae_admin`  (
 -- ----------------------------
 -- Records of vae_admin
 -- ----------------------------
-INSERT INTO `vae_admin` VALUES (1, 'admin', 'c7dd9c33a0618b89e9541215452ad5f5', 'PVFxItXQcDjhkURN02sA', 1, 1554791776, 1554791776, 1557890593, 13, '127.0.0.1', 0, 'Admin', NULL, '/themes/admin_themes/lib/vaeyo/img/thumb.png');
+INSERT INTO `vae_admin` VALUES (1, 'admin', '3dc877f39b5496dc9870490662a015a2', 'PVFxItXQcDjhkURN02sA', 1, 1554791776, 1554791776, 1557890593, 13, '127.0.0.1', 0, 'Admin', NULL, '/themes/admin_themes/lib/vaeyo/img/thumb.png');
 
 -- ----------------------------
 -- Table structure for vae_admin_group
