@@ -17,7 +17,7 @@
     "iscroll": "^5.2.0",
     "numeral": "^2.0.6",
     "qs": "^6.7.0",
-    "showdown": "^1.6.4",
+    "showdown": "^1.9.1",
     "vue": "^2.1.0",
     "vue-router": "^2.1.1",
     "vue-star-rating": "^1.6.1",
